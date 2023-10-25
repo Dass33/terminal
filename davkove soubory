@@ -1,0 +1,31 @@
+@echo off
+
+echo ----------------------
+echo muj komunikacni bot
+echo ----------------------
+
+:zacatek
+
+set /p prikaz = Zadej co potrebujes:
+rem prirazeni promene
+
+if "%prikaz%" == "ahoj" goto pozdrav
+if "%prikaz%" == "ping" goto  testuj
+if "%prikaz%" == "konec" goto  konec
+
+:nezname
+echo nevim co jsi napsal
+goto konec
+
+:pozdrav
+echo zdravicko
+goto konec
+
+
+
+:testuj
+ping %2 >> result.txt 
+goto konec
+
+:konec
+echo mej se hezky
